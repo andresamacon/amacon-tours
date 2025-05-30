@@ -2694,12 +2694,39 @@ a:hover.back-to-top {
     padding-bottom: 2rem !important;  /* empuja el footer lo suficiente hacia abajo */
   }
   
-/* Compensar el alto del navbar para todos los anclajes */
-#intro,
-#services,
-#details,
-#projects,
-#contact {
-  scroll-margin-top: 4rem; /* ajusta este “rem” al alto de tu navbar */
-}
-
+/* ----------------------------------
+   Reducir altura del navbar global
+   ---------------------------------- */
+   .navbar-custom {
+    /* Menos padding arriba/abajo */
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  /* Ajustar tamaño del logo para que encaje */
+  .navbar-custom .navbar-brand.logo-image img {
+    max-height: 4rem !important;   /* prueba con 1.8rem, 2rem, 2.2rem… */
+    width: auto !important;
+  }
+  
+  /* Ajustar también el padding de los enlaces */
+  .navbar-custom .nav-link {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  /* Opcional: en móviles un poco aún más compacto */
+  @media (max-width: 575.98px) {
+    .navbar-custom {
+      padding-top: 0.25rem !important;
+      padding-bottom: 0.25rem !important;
+    }
+    .navbar-custom .navbar-brand.logo-image img {
+      max-height: 1.8rem !important;
+    }
+    .navbar-custom .nav-link {
+      padding-top: 0.25rem !important;
+      padding-bottom: 0.25rem !important;
+    }
+  }
+  
